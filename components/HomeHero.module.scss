@@ -1,0 +1,108 @@
+@use "styles/mixin.scss" as mixin;
+
+section.hero {
+  // border: 1px solid red;
+  // height: calc(650px);
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.heroImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  // object-fit: fill;
+  object-position: right;
+
+  @include mixin.tablet {
+    object-position: 80%;
+  }
+}
+
+.arrow {
+  position: absolute;
+  left: -300px;
+  bottom: 5%;
+
+  @include mixin.tablet {
+    left: -100px;
+  }
+
+  @include mixin.desktop {
+    left: 50%;
+    bottom: 25%;
+  }
+}
+
+.circles {
+  display: none;
+  position: absolute;
+  right: -25px;
+  bottom: 5%;
+
+  @include mixin.tablet {
+    display: block;
+  }
+
+  @include mixin.desktop {
+    bottom: 25%;
+  }
+}
+
+.heroContent {
+  // border: 1px solid white;
+  // margin-top: 35%;
+  // padding-top: 40%;
+  // padding-bottom: 60%;
+  text-align: center;
+  color: mixin.$color-snow;
+  max-width: 500px;
+
+  @include mixin.desktop {
+    text-align: left;
+    max-width: 1400px;
+  }
+}
+
+.heroContent h1 {
+  /* border: 1px solid red; */
+  width: 80%;
+  margin-inline: auto;
+  font-size: 2rem;
+  font-family: "Space Mono", monospace;
+  // text-align: center;
+  max-width: 600px;
+
+  @include mixin.tablet {
+    font-size: 3.5rem;
+  }
+
+  @include mixin.desktop {
+    margin: 0;
+  }
+}
+
+.heroContent p {
+  color: mixin.$color-snow;
+  font-size: 0.85rem;
+  line-height: 1.6em;
+  font-family: "Lexend Deca", sans-serif;
+  padding: 2em 0;
+  max-width: 375px;
+  margin-inline: auto;
+
+  @include mixin.desktop {
+    margin-left: 5em;
+  }
+}

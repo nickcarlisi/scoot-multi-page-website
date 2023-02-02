@@ -1,0 +1,106 @@
+@use "styles/mixin.scss" as mixin;
+
+.smallCircle {
+  // border: 1px solid red;
+  text-align: center;
+  margin: 3em 0;
+
+  h2 {
+    width: 80%;
+    margin-inline: auto;
+    font-size: 1.5rem;
+    font-family: "Space Mono", monospace;
+    // text-align: center;
+    max-width: 600px;
+    color: mixin.$color-dark-navy;
+
+    @include mixin.tablet {
+      font-size: 3.5rem;
+    }
+
+    // @include mixin.desktop {
+    //   margin: 0;
+    // }
+  }
+
+  p {
+    padding: 2em 0;
+  }
+}
+
+.circleDiv {
+  width: 240px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto 2em;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.flex {
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  // @include mixin.desktop {
+  //   flex-direction: row-reverse;
+  // }
+
+  .imgContainer,
+  .copy {
+    // border: 1px solid blue;
+    flex: 1;
+  }
+
+  .imgContainer {
+    position: relative;
+    margin-bottom: 2em;
+
+    .yellowCircle {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: mixin.$color-yellow;
+      padding: 1.5em;
+      border-radius: 50%;
+      font-family: "Space Mono", monospace;
+      color: mixin.$color-dark-navy;
+      font-size: 1.5rem;
+    }
+  }
+
+  .copy {
+    text-align: center;
+
+    // @include mixin.desktop {
+    //   text-align: left;
+    // }
+  }
+}
+
+// .test {
+//   @include mixin.desktop {
+//     flex-direction: row;
+//   }
+// }
+
+// .imgContainer {
+//   border: 1px solid red;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: flex-start;
+
+//   * {
+//     border: 1px solid blue;
+//   }
+// }

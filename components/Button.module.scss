@@ -1,0 +1,22 @@
+@use "styles/mixin.scss" as mixin;
+
+.btn {
+  background-color: mixin.$color-yellow;
+  font-family: "Space Mono", monospace;
+  color: mixin.$color-snow;
+  padding: 1em 2em;
+  transition: all 0.25s ease;
+  margin-inline: auto;
+  display: block;
+  // display: none;
+
+  @include mixin.desktop {
+    margin: 0;
+  }
+
+  &:hover {
+    background-color: transparent;
+    outline: 1px solid mixin.$color-yellow;
+    color: mixin.$color-yellow;
+  }
+}

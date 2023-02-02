@@ -1,0 +1,45 @@
+@use "styles/mixin.scss" as mixin;
+
+.innerPageHeader {
+  // border: 1px solid red;
+  font-family: "Space Mono", monospace;
+}
+
+// .hero {
+//   // border: 1px solid red;
+//   // height: calc(650px);
+//   min-height: 650px;
+//   display: flex;
+//   align-items: center;
+//   overflow-x: hidden;
+// }
+
+.flex {
+  display: flex;
+  justify-content: center;
+
+  @include mixin.tablet {
+    justify-content: flex-start;
+  }
+}
+
+.headerImg {
+  position: relative;
+  z-index: -1;
+  height: 160px;
+  width: 100%;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.title {
+  position: absolute;
+  font-size: 3rem;
+  color: white;
+  padding: 1em 0;
+}

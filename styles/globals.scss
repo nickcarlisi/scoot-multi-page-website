@@ -1,0 +1,57 @@
+@use "./mixin.scss" as mixin;
+// @import url("https://use.typekit.net/nsp8kav.css"); //import typekit
+@import "_reset.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Space+Mono:wght@700&display=swap");
+
+// font-family: 'Lexend Deca', sans-serif;
+// font-family: 'Space Mono', monospace;
+
+// h1 {
+//   font-size: 5rem;
+//   font-family: "Space Mono", monospace;
+//   color: mixin.$color-yellow;
+// }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  // border: 1px solid red;
+  width: 90%;
+  max-width: 1400px;
+  margin-inline: auto;
+
+  @include mixin.tablet {
+    width: 80%;
+  }
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  color: mixin.$color-dim-grey;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+// .btn {
+//   background-color: mixin.$color-yellow;
+//   font-family: "Space Mono", monospace;
+//   color: mixin.$color-snow;
+//   padding: 1em 2em;
+//   transition: all 0.25s ease;
+//   margin-inline: auto;
+//   display: block;
+//   // display: none;
+
+//   // @include mixin.tablet {
+//   //   display: inline-flex;
+//   // }
+
+//   &:hover {
+//     background-color: transparent;
+//     outline: 1px solid mixin.$color-yellow;
+//     color: mixin.$color-yellow;
+//   }
+// }

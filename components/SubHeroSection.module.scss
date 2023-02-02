@@ -1,0 +1,40 @@
+@use "styles/mixin.scss" as mixin;
+
+.SubHeroSection {
+  // border: 1px solid red;
+  margin: 5em auto;
+  // display: grid;
+  position: relative;
+  // padding: 5em 0;
+}
+
+.greyline {
+  position: absolute;
+  width: 70%;
+  height: 15px;
+  // width: 15px;
+  // height: 80%;
+  background-color: mixin.$color-light-grey;
+  top: 48px;
+  transform: translateY(-50%);
+  // left: 15%;
+  z-index: -1;
+}
+
+.subHeroContainer {
+  width: 90%;
+  margin-inline: auto;
+  display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // border: 1px solid pink;
+  gap: 3em;
+
+  @include mixin.tablet {
+    width: 80%;
+    max-width: 1400px;
+  }
+
+  @include mixin.desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

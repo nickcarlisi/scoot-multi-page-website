@@ -1,0 +1,35 @@
+@use "styles/mixin.scss" as mixin;
+
+.FAQ {
+  background-color: mixin.$color-snow;
+  padding: 2em;
+  margin: 1em auto;
+  color: black;
+  cursor: pointer;
+
+  p {
+    color: black;
+    display: none;
+  }
+}
+
+p.show {
+  display: block;
+}
+
+.arrowContainer {
+  position: relative;
+  object-fit: contain;
+}
+
+.headerFlex {
+  // border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // transform: rotate(90deg);
+
+  .rotate {
+    transform: rotate(180deg);
+  }
+}

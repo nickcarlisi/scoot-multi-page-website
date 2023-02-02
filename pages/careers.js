@@ -5,18 +5,16 @@ import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 
 import Layout from "../components/Layout";
-import HomeHero from "../components/HomeHero";
-import SubHeroIcons from "../components/SubHeroIcons";
-import LargeCircle from "../components/LargeCircle";
-import { largeCircleDataHome } from "../data/largeCircleData";
-import { subHeroIconsData } from "../data/subHeroIconsData";
-import SubHeroSection from "../components/SubHeroSection";
+import InnerPageHeader from "../components/InnerPageHeader";
 import LargeCircleSection from "../components/LargeCircleSection";
-import SignUpSection from "../components/SignUpSection";
+import SmallCircleSection from "../components/SmallCircleSection";
+
+import { largeCircleDataCareers } from "../data/largeCircleData";
+import { smallCircleData } from "../data/smallCircleData";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <Head>
@@ -25,11 +23,18 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <Layout>
-        <HomeHero />
-        <SubHeroSection />
-        <LargeCircleSection largeCircleDataHome={largeCircleDataHome} />
-        <SignUpSection />
+        <InnerPageHeader
+          title="Careers "
+          imgSrc="/assets/images/careers-locations-hero-desktop.jpg"
+          alt="placeholder"
+        />
+        <LargeCircleSection largeCircleDataHome={largeCircleDataCareers} />
+        <SmallCircleSection
+          header={"Why join us?"}
+          smallCircleData={smallCircleData}
+        />
       </Layout>
     </>
   );

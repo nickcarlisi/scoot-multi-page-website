@@ -1,0 +1,41 @@
+@use "styles/mixin.scss" as mixin;
+
+.grid {
+  // border: 1px solid blue;
+  // display: grid;
+  // grid-template-columns: 1fr 3fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // margin: 2em auto;
+
+  @include mixin.tablet {
+    flex-direction: row;
+    gap: 5em;
+  }
+
+  @include mixin.desktop {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+}
+
+.grid > * {
+  // border: 1px solid red;
+}
+
+.copy {
+  text-align: center;
+
+  @include mixin.tablet {
+    text-align: left;
+  }
+}
+
+.heading {
+  font-family: "Space Mono", monospace;
+  color: mixin.$color-dark-navy;
+  font-size: 1.2rem;
+  margin: 1em auto;
+}

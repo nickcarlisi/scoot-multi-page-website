@@ -1,0 +1,80 @@
+@use "styles/mixin.scss" as mixin;
+
+.header {
+  font-family: "Space Mono", monospace;
+  color: mixin.$color-dim-grey;
+  background-color: mixin.$color-snow;
+  padding: 1em 0;
+  // position: fixed;
+  z-index: 10;
+  width: 100%;
+}
+
+.navFlex {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  @include mixin.tablet {
+    justify-content: space-between;
+  }
+}
+
+.navLinks {
+  display: none;
+
+  @include mixin.tablet {
+    display: inline-flex;
+    gap: 1em;
+  }
+
+  li {
+    transition: all 0.25s ease;
+
+    &:hover {
+      color: mixin.$color-yellow;
+    }
+  }
+}
+
+.logoAndLinks {
+  display: flex;
+  align-items: center;
+
+  @include mixin.tablet {
+    gap: 2em;
+  }
+}
+
+.navLogo {
+  display: inline-flex;
+  margin-inline: auto;
+}
+
+.hamburger {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include mixin.tablet {
+    display: none;
+  }
+}
+
+.navBtn {
+  display: none;
+
+  @include mixin.tablet {
+    display: inline-flex;
+  }
+}
+
+.btnContainer {
+  display: none;
+
+  @include mixin.tablet {
+    display: inline-flex;
+  }
+}

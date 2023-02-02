@@ -1,0 +1,44 @@
+@use "styles/mixin.scss" as mixin;
+
+.signUpSection {
+  background-color: mixin.$color-dark-navy;
+
+  color: mixin.$color-snow;
+  // border: 1px solid red;
+  padding: 5em 0;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+
+  @include mixin.desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.heading {
+  font-family: "Space Mono", monospace;
+  font-size: 2rem;
+  text-align: center;
+  margin-inline: auto;
+  margin-bottom: 1em;
+
+  @include mixin.tablet {
+    max-width: 400px;
+  }
+
+  @include mixin.desktop {
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
+
+.icons {
+  // border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
