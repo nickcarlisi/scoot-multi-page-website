@@ -28,7 +28,7 @@ export default function Home() {
       <Layout>
         <HomeHero />
         <SubHeroSection />
-        <LargeCircleSection largeCircleDataHome={largeCircleDataHome} />
+        <LargeCircleSection largeCircleData={largeCircleDataHome} />
         <SignUpSection />
       </Layout>
     </>

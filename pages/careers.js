@@ -8,9 +8,12 @@ import Layout from "../components/Layout";
 import InnerPageHeader from "../components/InnerPageHeader";
 import LargeCircleSection from "../components/LargeCircleSection";
 import SmallCircleSection from "../components/SmallCircleSection";
+import JobPostingSection from "../components/JobPostingSection";
+import SignUpSection from "../components/SignUpSection";
 
 import { largeCircleDataCareers } from "../data/largeCircleData";
 import { smallCircleData } from "../data/smallCircleData";
+import { jobPostingData } from "../data/jobPostingData";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,11 +33,13 @@ export default function About() {
           imgSrc="/assets/images/careers-locations-hero-desktop.jpg"
           alt="placeholder"
         />
-        <LargeCircleSection largeCircleDataHome={largeCircleDataCareers} />
+        <LargeCircleSection largeCircleData={largeCircleDataCareers} />
         <SmallCircleSection
           header={"Why join us?"}
           smallCircleData={smallCircleData}
         />
+        <JobPostingSection jobPostingData={jobPostingData} />
+        <SignUpSection />
       </Layout>
     </>
   );

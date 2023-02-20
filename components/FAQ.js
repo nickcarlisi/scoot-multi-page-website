@@ -6,7 +6,7 @@ import styles from "./FAQ.module.scss";
 
 export default function FAQ({ onClick, question, isOpen, answer }) {
   return (
-    <div className={`container ${styles.FAQ}`} onClick={onClick}>
+    <div className={` ${styles.FAQ}`} onClick={onClick}>
       <div className={styles.copy}>
         <div className={styles.headerFlex}>
           <h2>{question}</h2>

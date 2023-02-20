@@ -7,12 +7,12 @@ import LargeCircle from "../components/LargeCircle";
 import styles from "./LargeCircleSection.module.scss";
 
 export default function LargeCircleSection(props) {
-  const largeCircleDataHome = props.largeCircleDataHome;
+  const largeCircleData = props.largeCircleData;
 
   return (
     <section className={styles.largeCircleSection}>
       {/* <img src="/assets/patterns/line.svg"></img> */}
-      {largeCircleDataHome.map((data, i) => {
+      {largeCircleData.map((data, i) => {
         return (
           <LargeCircle
             key={i}

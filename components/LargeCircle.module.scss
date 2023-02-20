@@ -6,7 +6,7 @@
   margin: 3em 0;
 
   h2 {
-    width: 80%;
+    // width: 80%;
     margin-inline: auto;
     font-size: 2rem;
     font-family: "Space Mono", monospace;
@@ -45,7 +45,11 @@
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  margin: 0 auto 2em;
+  margin: 0 auto;
+
+  @include mixin.desktop {
+    margin: initial;
+  }
 
   img {
     object-fit: cover;
@@ -58,9 +62,11 @@
   // border: 1px solid red;
   display: flex;
   flex-direction: column;
+  gap: 2em;
 
   @include mixin.desktop {
     flex-direction: row-reverse;
+    gap: 3em;
   }
 
   .imgContainer,
@@ -69,11 +75,19 @@
     flex: 1;
   }
 
+  .imgContainer {
+    // border: 3px solid orange;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
   .copy {
     text-align: center;
 
     @include mixin.desktop {
       text-align: left;
+      max-width: 445px;
     }
   }
 }
@@ -81,17 +95,12 @@
 .test {
   @include mixin.desktop {
     flex-direction: row;
+    // border: 3px solid pink;
+
+    .imgContainer {
+      // display: flex;
+      justify-content: flex-start;
+      // align-items: flex-end;
+    }
   }
 }
-
-// .imgContainer {
-//   border: 1px solid red;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: flex-start;
-
-//   * {
-//     border: 1px solid blue;
-//   }
-// }

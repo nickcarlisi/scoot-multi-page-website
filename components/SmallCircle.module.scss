@@ -6,7 +6,7 @@
   margin: 3em 0;
 
   h2 {
-    width: 80%;
+    // width: 80%;
     margin-inline: auto;
     font-size: 1.5rem;
     font-family: "Space Mono", monospace;
@@ -15,7 +15,7 @@
     color: mixin.$color-dark-navy;
 
     @include mixin.tablet {
-      font-size: 3.5rem;
+      font-size: 2rem;
     }
 
     // @include mixin.desktop {

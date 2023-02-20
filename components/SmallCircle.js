@@ -23,7 +23,7 @@ export default function SmallCircle(props) {
               fill
             />
           </div>
-          <div className={styles.yellowCircle}>01</div>
+          <div className={styles.yellowCircle}>{props.number}</div>
         </div>
         <div className={styles.copy}>
           <h2>{props.heading}</h2>
