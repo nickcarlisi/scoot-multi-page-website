@@ -11,7 +11,7 @@ export default function JobPostingSection({ jobPostingData }) {
   // const FAQSectionData = props.FAQSectionData;
 
   return (
-    <section className={styles.JobPostingSection}>
+    <section className={`container ${styles.JobPostingSection}`}>
       <div>
         {jobPostingData.map((data, index) => {
           return (
