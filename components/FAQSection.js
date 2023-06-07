@@ -10,10 +10,15 @@ import styles from "./FAQSection.module.scss";
 export default function FAQSection({ FAQSectionDataHow, FAQSectionDataSafe }) {
   // const FAQSectionData = props.FAQSectionData;
 
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openFirstIndex, setFirstOpenIndex] = useState(null);
+  const [openSecondIndex, setSecondOpenIndex] = useState(null);
 
-  const handleClick = (index) => {
-    setOpenIndex(index === openIndex ? null : index);
+  const handleFirstClick = (index) => {
+    setFirstOpenIndex(index === openFirstIndex ? null : index);
+  };
+
+  const handleSecondClick = (index) => {
+    setSecondOpenIndex(index === openSecondIndex ? null : index);
   };
 
   return (
@@ -30,8 +35,8 @@ export default function FAQSection({ FAQSectionDataHow, FAQSectionDataSafe }) {
                 key={index}
                 question={data.question}
                 answer={data.answer}
-                isOpen={index === openIndex}
-                onClick={() => handleClick(index)}
+                isOpen={index === openFirstIndex}
+                onClick={() => handleFirstClick(index)}
               />
             );
           })}
@@ -48,8 +53,8 @@ export default function FAQSection({ FAQSectionDataHow, FAQSectionDataSafe }) {
                 key={index}
                 question={data.question}
                 answer={data.answer}
-                isOpen={index === openIndex}
-                onClick={() => handleClick(index)}
+                isOpen={index === openSecondIndex}
+                onClick={() => handleSecondClick(index)}
               />
             );
           })}
