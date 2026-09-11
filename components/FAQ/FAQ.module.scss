@@ -1,0 +1,55 @@
+@use "../../styles/mixin.scss" as mixin;
+
+.FAQ {
+  background-color: mixin.$color-snow;
+  padding: 2em;
+  // margin: 1em auto;
+  margin-inline: auto;
+  margin-bottom: 1em;
+  color: mixin.$color-dark-navy;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: mixin.$color-light-yellow;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-family: var(--font-space-mono), monospace;
+    // text-align: center;
+    max-width: 600px;
+    color: mixin.$color-dark-navy;
+
+    // @include mixin.tablet {
+    //   font-size: 2rem;
+    // }
+  }
+
+  p {
+    color: mixin.$color-dark-navy;
+    display: none;
+    padding-top: 1em;
+  }
+}
+
+p.show {
+  display: block;
+}
+
+.arrowContainer {
+  position: relative;
+  object-fit: contain;
+}
+
+.headerFlex {
+  // border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // transform: rotate(90deg);
+
+  .rotate {
+    transform: rotate(180deg);
+  }
+}

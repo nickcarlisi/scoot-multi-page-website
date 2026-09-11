@@ -1,8 +1,5 @@
 @use "./mixin.scss" as mixin;
-// @import url("https://use.typekit.net/nsp8kav.css"); //import typekit
-@import "_reset.scss";
-
-@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Space+Mono:wght@700&display=swap");
+@use "./reset";
 
 // font-family: 'Lexend Deca', sans-serif;
 // font-family: 'Space Mono', monospace;
@@ -17,6 +14,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: mixin.$color-snow;
+}
+
 .container {
   // border: 1px solid red;
   width: 90%;
@@ -29,7 +30,7 @@ html {
 }
 
 p {
-  font-family: "Lexend Deca", sans-serif;
+  font-family: var(--font-lexend-deca), sans-serif;
   color: mixin.$color-dim-grey;
   line-height: 1.6;
   font-size: 0.95rem;

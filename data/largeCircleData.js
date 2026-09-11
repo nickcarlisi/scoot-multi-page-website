@@ -10,6 +10,7 @@ export const largeCircleDataHome = [
     button: true,
     title: "Learn More",
     path: "/about",
+    arrowImgSrc: "/assets/patterns/left-downward-arrow.svg",
   },
   {
     imgSrc: "/assets/images/near-you.jpg",
@@ -19,6 +20,7 @@ export const largeCircleDataHome = [
     button: true,
     title: "Learn More",
     path: "/locations",
+    arrowImgSrc: "/assets/patterns/right-arrow.svg",
   },
   {
     imgSrc: "/assets/images/payments.jpg",
@@ -28,6 +30,7 @@ export const largeCircleDataHome = [
     button: true,
     title: "Learn More",
     path: "/about",
+    arrowImgSrc: "/assets/patterns/left-upward-arrow.svg",
   },
 ];
 
@@ -40,6 +43,7 @@ export const largeCircleDataAbout = [
     button: false,
     title: "",
     path: "",
+    arrowImgSrc: "/assets/patterns/left-upward-arrow.svg",
   },
   {
     imgSrc: "/assets/images/better-living.jpg",
@@ -49,6 +53,7 @@ export const largeCircleDataAbout = [
     button: false,
     title: "",
     path: "",
+    arrowImgSrc: "/assets/patterns/left-upward-arrow.svg",
   },
 ];
 
@@ -61,5 +66,6 @@ export const largeCircleDataCareers = [
     button: true,
     title: "Say Hello",
     path: "",
+    arrowImgSrc: "/assets/patterns/left-upward-arrow.svg",
   },
 ];
