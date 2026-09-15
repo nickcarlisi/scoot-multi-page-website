@@ -1,12 +1,18 @@
 @use "../../styles/mixin.scss" as mixin;
 
 section.hero {
-  // border: 1px solid red;
-  // height: calc(650px);
-  min-height: 650px;
+  --arrow-width: 45vw;
+  // min-height: 650px;
   display: flex;
   align-items: center;
+  position: relative;
   overflow-x: hidden;
+  padding: 30vw 0;
+
+  @include mixin.desktop {
+    --arrow-width: 31vw;
+    padding: 10vw 0;
+  }
 }
 
 .heroImg {
@@ -22,7 +28,6 @@ section.hero {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  // object-fit: fill;
   object-position: right;
 
   @include mixin.tablet {
@@ -30,58 +35,73 @@ section.hero {
   }
 }
 
-.arrow {
+
+
+.arrow,
+.leftLine {
   position: absolute;
-  left: -300px;
+  left: 0;
   bottom: 5%;
+  width: 20vw;
+  aspect-ratio: 9/3;
 
-  @include mixin.tablet {
-    left: -100px;
-  }
-
-  @include mixin.desktop {
-    left: 50%;
-    bottom: 25%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 
-.circles {
-  display: none;
-  position: absolute;
-  right: -25px;
-  bottom: 5%;
+.leftLine {
+  left: -25px;
+}
 
-  @include mixin.tablet {
-    display: block;
+.circles {
+  display: block;
+  position: absolute;
+  right: -4vw;
+  width: 22vw;
+  aspect-ratio: 234 / 63;
+  position-anchor: --hero-copy;
+  top: calc(anchor(bottom) + 1.5rem + var(--arrow-width) * 107 / 452);
+  transform: translateY(-50%);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   @include mixin.desktop {
-    bottom: 25%;
+    right: -3vw;
+    width: 16vw;
+    position-anchor: --hero-para;
+    top: calc(anchor(50%) + var(--arrow-width) * 107 / 452);
   }
 }
 
 .heroContent {
-  // border: 1px solid white;
-  // margin-top: 35%;
-  // padding-top: 40%;
-  // padding-bottom: 60%;
+
   text-align: center;
   color: mixin.$color-snow;
   max-width: 500px;
+  position: relative;
+  anchor-name: --hero-copy;
+  margin: 0 auto;
 
   @include mixin.desktop {
+    margin-left: 10%;
     text-align: left;
-    max-width: 1200px;
+    // max-width: 1200px;
   }
 }
 
 .heroContent h1 {
-  /* border: 1px solid red; */
+
   width: 80%;
   margin-inline: auto;
   font-size: 2rem;
   font-family: var(--font-space-mono), monospace;
-  // text-align: center;
   max-width: 600px;
 
   @include mixin.tablet {
@@ -93,16 +113,60 @@ section.hero {
   }
 }
 
-.heroContent p {
-  color: mixin.$color-snow;
-  font-size: 0.85rem;
-  line-height: 1.6em;
-  font-family: var(--font-lexend-deca), sans-serif;
-  padding: 2em 0;
+.heroCopy {
   max-width: 375px;
   margin-inline: auto;
 
   @include mixin.desktop {
     margin-left: 5em;
+  }
+}
+
+.heroContent p {
+  color: mixin.$color-snow;
+  font-size: 0.85rem;
+  line-height: 1.6em;
+  font-family: var(--font-lexend-deca), sans-serif;
+  padding: 2em;
+  anchor-name: --hero-para;
+
+  @include mixin.desktop {
+    position: relative;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &::before {
+    display: none;
+    background-image: url("/assets/patterns/line.svg");
+    background-size: 100% 100%;
+    width: 100vw;
+    height: calc(14vw * 15 / 203);
+    right: 100%;
+    top: 50%;
+
+    @include mixin.desktop {
+      display: block;
+    }
+  }
+
+  &::after {
+    background-image: url("/assets/patterns/right-arrow.svg");
+    width: var(--arrow-width);
+    aspect-ratio: 452 / 151;
+    top: calc(100% + 1.5rem);
+    left: calc(50% - 50vw);
+
+    @include mixin.desktop {
+      top: 50%;
+      left: 100%;
+    }
   }
 }

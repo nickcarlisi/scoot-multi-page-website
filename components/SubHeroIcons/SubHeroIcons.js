@@ -2,7 +2,8 @@ import Image from "next/image";
 
 import styles from "./SubHeroIcons.module.scss";
 
-export default function SubHeroIcons(props) {
+export default function SubHeroIcons(props)
+{
   return (
     <div className={styles.subHeroIcons}>
       <div className={`${styles.grid}`}>
@@ -13,8 +14,7 @@ export default function SubHeroIcons(props) {
             // src={props.imgSrc}
             src={props.imgSrc}
             alt={props.alt}
-            width={96}
-            height={96}
+            fill
           />
         </div>
         <div className={styles.copy}>

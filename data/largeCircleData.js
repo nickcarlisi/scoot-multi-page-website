@@ -30,7 +30,8 @@ export const largeCircleDataHome = [
     button: true,
     title: "Learn More",
     path: "/about",
-    arrowImgSrc: "/assets/patterns/left-upward-arrow.svg",
+    arrowImgSrc: "/assets/patterns/right-arrow.svg",
+    mirrorArrow: true,
   },
 ];
 

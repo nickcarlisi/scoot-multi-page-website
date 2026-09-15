@@ -11,14 +11,15 @@ export default function SignUpSection(props)
           <h2 className={styles.heading}>Sign up and Scoot off today</h2>
         </div>
         <div className={styles.icons}>
-          <Image
-            className={styles.icon}
-            src="/assets/icons/app-store.svg"
-            // alt={props.alt}
-            alt="alt text"
-            width={159}
-            height={56}
-          />
+          <div className={styles.icon}>
+            <Image
+              className={styles.icon}
+              src="/assets/icons/app-store.svg"
+              // alt={props.alt}
+              alt="alt text"
+              fill
+            />
+          </div>
 
           <div className={styles.icon}>
             <Image
@@ -26,8 +27,7 @@ export default function SignUpSection(props)
               src="/assets/icons/google-play.svg"
               // alt={props.alt}
               alt="alt text"
-              width={182}
-              height={56}
+              fill
             />
           </div>
         </div>

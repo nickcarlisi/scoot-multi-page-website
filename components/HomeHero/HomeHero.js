@@ -4,40 +4,33 @@ import Button from "../Button/Button";
 
 import styles from "./HomeHero.module.scss";
 
-export default function HomeHero(props) {
+export default function HomeHero(props)
+{
   return (
     <section className={styles.hero}>
-      <div className={`container ${styles.heroContent}`}>
-        <h1>Scooter sharing made simple</h1>
-        <p>
-          Scoot takes the hassle out of urban mobility. Our bikes are placed in
-          convenient locations in each of our cities. Use our app to locate the
-          nearest bike, unlock it with a tap, and you’re away!
-        </p>
-        <Button title="Get Scootin" path="#signupsection" />
-      </div>
-      <div className={styles.arrow}>
+      {/* <div className={styles.leftLine}>
         <Image
           src="/assets/patterns/right-arrow.svg"
           alt="arrow icon"
-          width={452}
-          height={151}
-          // layout="fill"
-          // objectFit="cover"
-          // rel="preload"
-          // priority={true}
+          fill
         />
+      </div> */}
+      <div className={`${styles.heroContent}`}>
+        <h1>Scooter sharing made simple</h1>
+        <div className={styles.heroCopy}>
+          <p>
+            Scoot takes the hassle out of urban mobility. Our bikes are placed in
+            convenient locations in each of our cities. Use our app to locate the
+            nearest bike, unlock it with a tap, and you’re away!
+          </p>
+        </div>
+        <Button title="Get Scootin" path="#signupsection" />
       </div>
       <div className={styles.circles}>
         <Image
           src="/assets/patterns/white-circles.svg"
-          alt="arrow icon"
-          width={234}
-          height={63}
-          // layout="fill"
-          // objectFit="cover"
-          // rel="preload"
-          // priority={true}
+          alt=""
+          fill
         />
       </div>
       <div className={styles.heroImg}>
